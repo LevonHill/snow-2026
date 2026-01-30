@@ -10,9 +10,48 @@ Explore useful features: Explore additional features and resources in the Platfo
 
 Unified Navigation header
 ![alt text](image-1.png)
+<<<<<<< HEAD:welcome-to-servicenow/Next experience-navigation-and-access-module/next-experience.md
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 ![alt text](image-7.png)
+=======
+1.All menu
+Your go-to for all applications and modules in the Platform.
+
+
+2.Favorites
+Displays items that you have added as favorites. Select the Edit (pencil) icon to customize your list of favorites.
+
+3.History
+The History menu is a scrolling view of recent activities including: 
+
+-  forms and lists accessed
+
+-  catalog items
+
+-  homepages visited
+
+4.Workspaces
+The Workspaces menu is a list of workspaces you have access to. NOTE: This menu item displays only if you have access to a workspace. If you have access to only one workspace, the name of that workspace will display in the header (ex. Agent Workspace, Asset Workspace, or CMDB Workspace). 
+
+5. Contextual App Pill
+The Contextual App Pill provides the context for where you are in the instance. You can select the star icon to favorite the displayed page. 
+
+6.Global Search
+Search for information across applications and records. The Global Search is the quickest way to locate an individual record
+
+7.sidebar discussions
+Opens the Sidebar discussions window. You start a new discussion, or browse All, Unread, Record-related, Mentions, and Favorite messages.
+
+8.Embedded Help
+Open the help panel for embedded help, feedback, and related articles where available. If there is no embedded help available, you can always search ServiceNow Product Documentation to find resources. 
+
+9.Notifications
+View and personalize notifications that are applicable to you across your instance at a central location. Your notifications are based on your access in the Platform.
+
+10.User Menu
+Provides options to access your profile. This is also where you may personalize your instance, set display, explore accessibility, and log out. 
+>>>>>>> 39c5876c0b296a8851a403928f1dc85a81ee0047:Next experience-navigation-and-access-module/next-experience.md
