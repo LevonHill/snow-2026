@@ -97,3 +97,52 @@ The Activity Stream inline editor enables users to contribute to work within a r
 2.With the window open, scroll down to browse the records recently updated and hover over an update you wish to comment, then select Comment. 
 
 3.Enter your comment into the text field, (select the checkbox for Work Notes or Additional comments (Customer visible) if applicable), then select the Post button. 
+
+
+
+Visual Task Boards (VTBs)
+
+Transform your lists and forms into an interactive graphical experience using Visual Task Boards (VTBs). Visual Task Boards allow you to: 
+
+Manage tasks through a visual, drag-and-drop interface
+Identify process bottlenecks at a glance, in real-time
+Track embedded activity screens to view updates all in one place
+![alt text](image-10.png)
+
+1. Show all / Change boards
+Select this 4-square icon to show all VTBs  you own or belong to (have access to). 
+
+
+
+Select the downward arrow to choose which board you would like to view and/or work on. 
+
+
+
+This area also displays the title of the VTB.
+
+2.Taskboard tools
+The Taskboard tools area provides a way to filter tasks by title or number. It also is where you can view information about the VTB, add or view members, add or filter labels, show activity stream, and select configurations for the VTB. 
+
+3.Quick panel
+Displays the active participants, or assignees that appear on the board, depending on the data presented. 
+
+4.Lanes
+Depending on how the data is sorted, the lanes will separate each card into different categories. You may drag and drop cards from one lane to another. 
+For example, the lanes in this board are sorted by the State of the Incident. 
+
+5.Cards
+Task records from a list, presented with a short description, task number, when it was updated, and who it's assigned to. 
+
+VTBs can have a number of functions in the Platform. You may use them to create a personal to-do list, collaborate in real-time with group members on assignments, and more! Displayed graphically as lanes and cards, VTBs provide a landing page to view and organize work in ServiceNow. There are two types of VTBs: Freeform and Data Driven. Select the left and right arrows to view a description of each. 
+
+Show a VTB from a list
+
+You may create a VTB from a list view by selecting a few records (or all records, as seen below), selecting the Actions on selected rows dropdown menu, and then selecting Add to Visual Task Board. 
+
+![alt text](image-11.png)
+
+
+You may also show a VTB from a list view, by breaking up data for whichever column the VTB is created from. All you have to do is select Column options (from any column) and select Show Visual Task Board. 
+![alt text](image-12.png)
+
+Ready to explore? To get started with a VTB, navigate to All > Self-Service > Visual Task Boards and follow the displayed instructions for creating your first board. 
