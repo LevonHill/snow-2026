@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>KB: Fix “Device management could not be enabled” Error</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f9f9f9;
+    padding: 30px;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    border-radius: 8px;
+  }
+  h1 {
+    color: #0078d7;
+    border-bottom: 3px solid #0078d7;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #004a9f;
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+  }
+  p {
+    margin: 12px 0;
+  }
+  ul {
+    margin: 12px 0 12px 20px;
+  }
+  code {
+    background: #f4f4f4;
+    padding: 3px 6px;
+    font-family: Consolas, monospace;
+    font-size: 0.95em;
+    border-radius: 3px;
+  }
+  .note {
+    background: #e7f3ff;
+    border-left: 5px solid #0078d7;
+    padding: 12px 15px;
+    margin: 20px 0;
+    color: #004a9f;
+  }
+  .error-image {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .error-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  footer {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>KB Article: Fixing “Device management could not be enabled” Error Due to Corrupted AAD Identity Cache</h1>
+
+    <h2>Issue</h2>
+    <p>Users attempting to enroll their device in Azure AD or enable device management receive the following error message:</p>
+    <blockquote><strong>Device management could not be enabled</strong><br />
+      Your account was not set up on this device because device management could not be enabled. This device might not be able to access some resources, such as Wi-Fi, VPN, or email.
+    </blockquote>
+    <h3>Additional info from troubleshooting details:</h3>
+    <ul>
+      <li><strong>Error Code:</strong> 2147467261</li>
+      <li><strong>Message:</strong> Invalid pointer Parameter 1 is null or undefined</li>
+      <li><strong>Impact:</strong> Device management and access to corporate resources is blocked.</li>
+    </ul>
+
+    <h2>Cause</h2>
+    <p>This issue occurs because the <strong>user’s cached Azure AD identity tokens and device registration data are corrupted or “poisoned.”</strong> Windows tries to use these stale tokens during enrollment, resulting in failure to enable device management.</p>
+    <p>Corruption typically affects:</p>
+    <ul>
+      <li>The user’s <code>IdentityCache</code> folder, which stores WAM/AAD tokens</li>
+      <li>The <code>Microsoft.AAD.BrokerPlugin</code> package data in the user profile</li>
+      <li>Sometimes Windows Hello (NGC) keys may also cause issues if configured</li>
+    </ul>
+    <p>These artifacts survive reboots and service-side fixes and prevent successful device enrollment.</p>
+
+    <h2>Resolution</h2>
+    <p><strong>Clearing the corrupted client-side identity cache and forcing Windows to recreate fresh tokens fixes the issue.</strong></p>
+
+    <h3>Steps:</h3>
+    <ol>
+      <li><strong>Ensure the affected user is signed out of the device.</strong></li>
+      <li><strong>Using admin credentials, delete the following folders:</strong>
+        <ul>
+          <li><code>C:\Users&lt;username&gt;\AppData\Local\Microsoft\IdentityCache</code></li>
+          <li><code>C:\Users&lt;username&gt;\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy</code></li>
+        </ul>
+      </li>
+      <li>(Optional) If the issue persists, clear Windows Hello keys by deleting contents of: <code>C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Ngc</code><br />
+        <span class="note">Note: Requires taking ownership before deletion.</span>
+      </li>
+      <li><strong>Restart the device.</strong></li>
+      <li>Have the user <strong>sign back in and reattempt device enrollment</strong>.</li>
+    </ol>
+
+    <h2>Additional Troubleshooting</h2>
+    <ul>
+      <li>Run <code>dsregcmd /status</code> to verify Azure AD join status and token availability.</li>
+      <li>Ensure Conditional Access policies or device compliance requirements are not blocking enrollment.</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <p>Deleting the user’s <code>IdentityCache</code> and <code>AAD BrokerPlugin</code> cached tokens removes corrupted sign-in artifacts that prevent device management from enabling. Upon sign-in, Windows recreates these caches with fresh, valid tokens, allowing successful device enrollment.</p>
+
+    <div class="error-image">
+      <img src="cid:image" alt="Device management could not be enabled error" />
+    </div>
+
+    <p>If you need a script to automate this cleanup or help interpreting <code>dsregcmd /status</code>, contact your support team or Microsoft support.</p>
+
+    <footer>
+      &copy; 2026 Your Company IT Support
+    </footer>
+  </div>
+</body>
+</html>
