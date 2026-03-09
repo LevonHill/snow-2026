@@ -25,9 +25,13 @@ function checkPermissions(user) {
     }
 }
 
+const btn = document.getElementById('Btn');
+btn.addEventListener('click', () => {
+alert('You clicked the button');
+});
+
+
+
 list.push(user1, user2);
 
-setInterval(() => {
-checkPermissions(user1);
-checkPermissions(user2);
-},1000);
+console.log(checkPermissions(user2));

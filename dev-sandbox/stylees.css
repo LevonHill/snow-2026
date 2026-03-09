@@ -34,3 +34,15 @@ img {
     justify-content: space-between;
     gap: 20px;
 }
+#Btn {
+    padding: 10px 20px;
+    background-color: rgb(134, 214, 29);
+    color: rgb(34, 55, 146);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#Btn:hover {
+    background-color: rgb(34, 146, 49);
+    color: blue;
+}
