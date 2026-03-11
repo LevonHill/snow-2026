@@ -24,9 +24,11 @@ function checkMFA(user) {
     else if (user.mobilephone !== ''){
         return 0 ,'User has MFA set';
     }
-
 }
-//returns 'User does not have MFA set' for Simon and 'User has MFA set' for Von its checking mobilephone property of each user object
-console.table(list);//im returning the list of users in a table format for better visualization
-console.log(checkMFA(Simon));
-console.log(checkMFA(Von));
+
+list.push(user1, user2);
+
+setInterval(() => {
+checkPermissions(user1);
+checkPermissions(user2);
+},1000);
