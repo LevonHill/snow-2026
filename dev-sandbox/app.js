@@ -25,6 +25,9 @@ function checkPermissions(user) {
     }
 }
 
+
+
+
 const btn = document.getElementById('Btn');
 btn.addEventListener('click', () => {
 alert('You clicked the button');
