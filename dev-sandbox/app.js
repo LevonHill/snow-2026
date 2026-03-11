@@ -1,33 +1,32 @@
 const list = [];
-
-user1 = {
+Simon = {
+    name: 'Simon',
+    age: 24,
+    city: 'Wheatland',
+    state: 'PA',
+    role: 'Admin',
+    mobilephone: ''
+};
+Von = {
     name: 'Levon',
-    age: 30,
+    age: 29,
     city: 'Austintown',
     state: 'Ohio',
-    role: 'Admin'
+    role: 'User',
+    mobilephone: '123-456-7890'
 };
-user2 = {
-    name: 'John',
-    age: 25,
-    city: 'Youngstown',
-    state: 'Ohio',
-    role: 'User'
-};
+list.push(Simon, Von);
 
+function checkMFA(user) {
+    if(user.mobilephone === ''){
+        return 1 ,'User does not have MFA set';
+    }
+    else if (user.mobilephone !== ''){
+        return 0 ,'User has MFA set';
+    }
 
-function checkPermissions(user) {
-    if(user.role === 'Admin'){
-        return 'Your an Admin Access granted';
-    }
-    else{
-        return 'Your not an Admin Access Denied';
-    }
 }
-
-list.push(user1, user2);
-
-setInterval(() => {
-checkPermissions(user1);
-checkPermissions(user2);
-},1000);
+//returns 'User does not have MFA set' for Simon and 'User has MFA set' for Von its checking mobilephone property of each user object
+console.table(list);//im returning the list of users in a table format for better visualization
+console.log(checkMFA(Simon));
+console.log(checkMFA(Von));
