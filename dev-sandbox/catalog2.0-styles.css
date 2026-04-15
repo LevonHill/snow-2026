@@ -1,0 +1,49 @@
+/* ===== FULL PAGE IT SUPPORT THEME ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:red;
+}
+
+/* Center hero section feel */
+.sp-page-sc_category .container,
+.sp-page-sc_category .container-fluid {
+  padding-top: 40px;
+}
+
+/* HERO TITLE AREA (we fake one visually) */
+.it-hero {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #0b1f3a,
+    #123a63
+  );
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.it-hero h1 {
+  font-size: 34px;
+  margin: 0;
+}
+
+.it-hero p {
+  opacity: 0.85;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Make catalog tiles look modern */
+.panel, .card, .well {
+  border-radius: 12px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important;
+  transition: transform 0.2s ease;
+}
+
+.panel:hover, .card:hover {
+  transform: translateY(-3px);
+}

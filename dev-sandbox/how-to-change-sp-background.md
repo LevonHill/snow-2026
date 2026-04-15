@@ -1,0 +1,1 @@
+So go to system ui > images upload the pic, then inside the record copy link. and use this in your themes 'css variables .. to get to css variables find the theme on the service portal record navigate to the right page , use service portal > pages then you'll hit page specific css.
