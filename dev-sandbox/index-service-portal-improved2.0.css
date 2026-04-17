@@ -1,0 +1,123 @@
+section.page {
+  background: url('https://zekelmandev.service-now.com/847903491b504b504601cbf2604bcba1.iix') center center / cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Stronger overlay for better readability */
+section.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 12, 20, 0.75),
+    rgba(10, 12, 20, 0.85)
+  );
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+/* Ensure content is above overlay */
+section.page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove spacing noise */
+section.page,
+main.body {
+  padding-top: 0px !important;
+}
+
+/* Glass containers with better separation */
+.panel,
+.widget,
+.sp-widget,
+.container,
+div[role="region"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+/* Add hover lift so things feel interactive */
+.panel:hover,
+.widget:hover,
+.sp-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Typography upgrade */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #f1f5f9;
+  letter-spacing: 0.2px;
+}
+
+/* Headings stand out more */
+h1, h2, h3 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Subtext more readable */
+p, span, small {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Links feel modern + visible */
+a {
+  color: #7dd3fc;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* Buttons feel more premium */
+button,
+.btn {
+  border-radius: 12px !important;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+}
+
+/* Search bar enhancement (important for your page) */
+input[type="search"],
+input.form-control {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  border: none;
+  padding: 12px 18px;
+  font-size: 15px;
+}
+
+input[type="search"]:focus,
+input.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35);
+}
+
+/* Navbar refinement */
+.navbar,
+.sp-nav-bar {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

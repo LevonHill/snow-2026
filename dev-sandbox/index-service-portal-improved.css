@@ -1,0 +1,75 @@
+section.page {
+  background: url('https://zekelmandev.service-now.com/847903491b504b504601cbf2604bcba1.iix') center center / cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Dark overlay for readability (VERY important) */
+section.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 20, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+/* Make sure all content sits above overlay */
+section.page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove spacing noise */
+section.page,
+main.body {
+  padding-top: 0px !important;
+}
+
+/* Glass effect for widgets / containers */
+.panel,
+.widget,
+.sp-widget,
+.container,
+div[role="region"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth typography upgrade */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e6e6e6;
+}
+
+/* Links modern feel */
+a {
+  color: #7dd3fc;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #38bdf8;
+}
+
+/* Buttons modern look */
+button,
+.btn {
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Optional: soften navbar if present */
+.navbar, .sp-nav-bar {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
