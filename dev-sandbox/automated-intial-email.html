@@ -1,0 +1,96 @@
+<p>&nbsp;</p>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f9; padding:20px 0;">
+  <tr>
+    <td align="center">
+
+      <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden;">
+        
+        <!-- Header -->
+        <tr>
+          <td style="background-color:#1f3a5f; padding:20px; text-align:center; font-family:Arial, sans-serif;">
+            <h1 style="color:#ffffff; margin:0; font-size:22px; font-weight:600;">
+              Zekelman Help Desk
+            </h1>
+            <p style="color:#cfd8e3; margin:5px 0 0 0; font-size:13px;">
+              Automated Notification
+            </p>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="padding:30px; font-family:Arial, sans-serif; color:#333333; font-size:14px; line-height:1.6;">
+
+            <!-- Greeting -->
+            <p style="margin:0 0 15px 0;">
+              Hello <strong>${caller_id.name}</strong>,
+            </p>
+
+            <!-- Summary -->
+            <p style="margin:0 0 15px 0;">
+              Your request <strong>(${number})</strong> has been assigned and is now being reviewed.
+            </p>
+
+            <!-- Info Box -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8fafc; border-left:4px solid #1f3a5f; margin:20px 0;">
+              <tr>
+                <td style="padding:15px;">
+
+                  <p style="margin:0 0 10px 0;">
+                    <strong>Request:</strong> ${short_description}
+                  </p>
+
+                  <p style="margin:0 0 10px 0;">
+                    <strong>Status:</strong> In Progress
+                  </p>
+
+                  <p style="margin:0;">
+                    I’m reviewing the details and will follow up if anything else is needed. 
+                    You’ll receive updates as progress is made.
+                  </p>
+
+                </td>
+              </tr>
+            </table>
+
+            <!-- Guidance -->
+            <p style="margin:0 0 20px 0;">
+              To help us resolve this faster, feel free to reply with additional details or screenshots.
+            </p>
+
+            <!-- Button -->
+            <table cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                  <a href="incident.do?sys_id=${sys_id}" 
+                     style="display:inline-block; background-color:#2563eb; color:#ffffff; padding:12px 20px; border-radius:6px; text-decoration:none; font-weight:600; border:1px solid #1e40af;">
+                    View Request
+                  </a>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Signature -->
+            <p style="margin:25px 0 0 0;">
+              Thanks,<br>
+              <strong>${assigned_to.name}</strong><br>
+              Zekelman IT Support
+            </p>
+
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#f1f3f6; padding:15px; text-align:center; font-family:Arial, sans-serif;">
+            <p style="margin:0; font-size:12px; color:#555555;">
+              &copy; 2026 Zekelman • IT Service Management
+            </p>
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
