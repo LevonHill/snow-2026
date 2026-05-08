@@ -1,0 +1,250 @@
+/* ===== PAGE BACKGROUND ===== */
+section.page {
+  background: url('https://zekelmandev.service-now.com/847903491b504b504601cbf2604bcba1.iix') center center / cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== DARK OVERLAY ===== */
+section.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 20, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+
+  /* FIX */
+  pointer-events: none;
+}
+
+/* ===== CONTENT ABOVE OVERLAY ===== */
+section.page > *,
+main.body {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== NAVBAR FIX ===== */
+/* Ensures dropdowns stay above page layers */
+.navbar,
+.sp-nav-bar,
+.dropdown-menu,
+.navbar-collapse,
+.navbar-nav {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* ===== REMOVE SPACING ===== */
+section.page,
+main.body {
+  padding-top: 0px !important;
+}
+
+/* ===== HEADER COLOR ===== */
+.sp-tagline-color {
+  color: #fff !important;
+}
+
+/* ===== EMPLOYEE CENTER NAV ===== */
+.employee-center-navigation .main-menu {
+  background-color: #9f1313 !important;
+}
+
+/* ===== NAVBAR ===== */
+.navbar,
+.sp-nav-bar {
+  background: #dc2626 !important;
+  border-bottom: none;
+}
+
+/* Navbar text/icons */
+.navbar *,
+.sp-nav-bar * {
+  color: #ffffff !important;
+}
+
+/* ===== HERO ===== */
+.hero,
+.jumbotron,
+.sp-search,
+div[data-widget*="search"],
+div[data-widget*="typeahead"] {
+  background: #ffffff !important;
+  border-radius: 18px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== HERO FALLBACK ===== */
+main.body .row:first-child .col-md-12 > div {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 30px;
+}
+
+/* ===== HERO TEXT ===== */
+.hero h1,
+.hero h2,
+.hero p,
+.jumbotron h1,
+.jumbotron p,
+.sp-search h1,
+.sp-search p {
+  color: #111827 !important;
+}
+
+/* ===== SEARCH ===== */
+input.form-control {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  color: #111827;
+}
+
+input.form-control::placeholder {
+  color: #6b7280;
+}
+
+/* ===== GLASS WIDGETS ===== */
+/* REMOVED .container TO AVOID GLOBAL LAYOUT ISSUES */
+.panel,
+.widget,
+.sp-widget,
+div[role="region"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== ACTION CARDS ===== */
+.quick-action,
+.card {
+  background: #ffffff !important;
+  color: #111827;
+  border-radius: 14px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Text inside cards */
+.quick-action h3,
+.card h3 {
+  color: #111827;
+}
+
+.quick-action p,
+.card p {
+  color: #4b5563;
+}
+
+/* Hover interaction */
+.quick-action:hover,
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* ===== TYPOGRAPHY ===== */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e6e6e6;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #7dd3fc;
+}
+
+a:hover {
+  color: #38bdf8;
+}
+
+/* ===== BUTTONS ===== */
+button,
+.btn {
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== HOMEPAGE QUICKLINKS ===== */
+.homepage-quicklinks {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ===== HERO SECTION ===== */
+.homepage-quicklinks > div:first-child {
+  background: #ffffff !important;
+  border-radius: 18px;
+  padding: 40px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* Hero text */
+.homepage-quicklinks > div:first-child h1,
+.homepage-quicklinks > div:first-child p {
+  color: #111827 !important;
+}
+
+/* ===== QUICK LINKS ROW ===== */
+.homepage-quicklinks > div:last-child {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* ===== INDIVIDUAL CARDS ===== */
+.homepage-quicklinks .col-md-3 {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 10px 0;
+  transition: all 0.2s ease;
+}
+
+/* Card text */
+.homepage-quicklinks .col-md-3 h3 {
+  color: #000;
+}
+
+.homepage-quicklinks .col-md-3 p {
+  color: #4b5563;
+}
+
+/* Hover */
+.homepage-quicklinks .col-md-3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* ===== CUSTOM PANELS ===== */
+.panel-default {
+  background-color: #AF1818 !important;
+}
+
+.panel-heading {
+  color: #FFF !important;
+}
+
+/* ===== ANNOUNCEMENTS ===== */
+.spw-announcements-root .details div.title div,
+.spw-announcements-root .details div.title a {
+  color: #404040 !important;
+}
+
+/* ===== INSTANCE LABEL ===== */
+.instance-display-text {
+  color: #0a0a0a !important;
+}
