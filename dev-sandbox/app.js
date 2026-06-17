@@ -1,6 +1,8 @@
 const list = [];
 const finance = [];
-
+let DefaultColor = 'blue';
+let usercolor = 'red';
+let currentColor = DefaultColor || usercolor;
 excelData = {
    totalAmmount: 100000,
    totalUsers: 1000,
