@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Completed</title>
+    <title>Request Submitted Successfully</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5;">
     <div style="width: 100%; background-color: #f5f5f5; padding: 20px 0;">
@@ -11,7 +11,7 @@
             <!-- Header -->
             <tr>
                 <td style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); padding: 30px 20px; text-align: center;">
-                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">Request Update</h1>
+                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">Request Submitted Successfully</h1>
                 </td>
             </tr>
 
@@ -20,15 +20,33 @@
                 <td style="padding: 40px 30px; background-color: #ffffff;">
                     <div style="color: #333333; line-height: 1.6; font-size: 16px;">
                         <p style="margin: 0 0 20px 0; color: #1a1a1a;">
-                            Your request has been updated. Please review the latest details below.
+                            Your request has been successfully opened and submitted. We've received your submission and our team will begin processing it shortly.
                         </p>
+
+                        <!-- Request Reference Box -->
+                        <div style="background-color: #f9f9f9; border-left: 4px solid #dc143c; padding: 20px; margin: 25px 0; border-radius: 4px;">
+                            <p style="margin: 0 0 10px 0; color: #666666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                                Request Reference
+                            </p>
+                            <p style="margin: 0; color: #1a1a1a; font-weight: bold; font-size: 20px;">
+                                ${request_item.number}
+                            </p>
+                            <p style="margin: 8px 0 0 0; color: #666666; font-size: 13px;">
+                                Please keep this number for your records
+                            </p>
+                        </div>
 
                         <!-- Call-to-Action Button -->
                         <div style="margin: 30px 0; text-align: center;">
                             <a href="${request_item_link}" style="display: inline-block; background-color: #dc143c; color: #ffffff; padding: 14px 40px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 16px; border: 2px solid #dc143c; transition: background-color 0.3s;">
-                                View Request Details
+                                View Your Request
                             </a>
                         </div>
+
+                        <p style="margin: 20px 0 20px 0; color: #1a1a1a; font-size: 14px;">
+                            <strong>What happens next?</strong><br>
+                            Your request has been assigned to our team. You will receive updates via email as your request progresses through our review process.
+                        </p>
 
                         <p style="margin: 20px 0 20px 0; color: #1a1a1a; text-align: center;">
                             Questions? Contact:
