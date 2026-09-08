@@ -3,81 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Lifecycle Completed</title>
+    <title>Request Completed</title>
 </head>
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5;">
-    <div style="width: 100%; background-color: #f5f5f5; padding: 20px 0;">
-        <table role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-collapse: collapse; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            <!-- Header -->
+<body style="margin: 0; padding: 0; background-color: #f3f4f6;">
+    <div style="width: 100%; background-color: #f3f4f6; padding: 24px 0;">
+        <div style="display: none; font-size: 1px; color: #f3f4f6; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">
+            Request ${request_item.number} has been completed and closed. Review final details in your Service Portal.
+        </div>
+
+        <table role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-collapse: collapse; border: 1px solid #e5e7eb;">
             <tr>
-                <td style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); padding: 30px 20px; text-align: center;">
-                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">Request Completed</h1>
+                <td style="background-color: #171717; background-image: linear-gradient(135deg, #171717 0%, #303030 100%); padding: 32px 24px; text-align: center;">
+                    <p style="margin: 0 0 8px 0; color: #fca5a5; font-size: 12px; letter-spacing: 1.1px; text-transform: uppercase;">Service Request</p>
+                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; line-height: 1.25; font-weight: 700;">Request Completed</h1>
                 </td>
             </tr>
 
-            <!-- Content -->
             <tr>
-                <td style="padding: 40px 30px; background-color: #ffffff;">
-                    <div style="color: #333333; line-height: 1.6; font-size: 16px;">
-                        <p style="margin: 0 0 20px 0; color: #1a1a1a;">
-                            Your request has been completed and closed. Thank you for working with us!
-                        </p>
+                <td style="padding: 32px 24px; background-color: #ffffff; color: #333333; font-size: 16px; line-height: 1.65;">
+                    <p style="margin: 0 0 18px 0; color: #1a1a1a;">Your requested item has been completed and closed. Thank you for working with Zekelman IT.</p>
 
-                        <!-- Completion Summary Box -->
-                        <div style="background-color: #f9f9f9; border-left: 4px solid #dc143c; padding: 20px; margin: 25px 0; border-radius: 4px;">
-                            <p style="margin: 0 0 15px 0; color: #1a1a1a; font-weight: bold; font-size: 16px;">
-                                Request Details
-                            </p>
-                            <p style="margin: 0 0 10px 0; color: #666666; font-size: 13px;">
-                                <strong>Request Number:</strong> ${request_item.number}
-                            </p>
-                            <p style="margin: 0 0 10px 0; color: #666666; font-size: 13px;">
-                                <strong>Status:</strong> <span style="color: #1a1a1a; font-weight: bold;">${request_item.state}</span>
-                            </p>
-                            <p style="margin: 0; color: #666666; font-size: 13px;">
-                                <strong>Completed On:</strong> ${request_item.closed_on}
-                            </p>
-                        </div>
-
-                        <!-- Call-to-Action Button -->
-                        <div style="margin: 30px 0; text-align: center;">
-                            <a href="${request_item_link}" style="display: inline-block; background-color: #dc143c; color: #ffffff; padding: 14px 40px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 16px; border: 2px solid #dc143c; transition: background-color 0.3s;">
-                                View Request Summary
-                            </a>
-                        </div>
-
-                        <p style="margin: 20px 0 20px 0; color: #1a1a1a; font-size: 14px;">
-                            <strong>Need more information?</strong><br>
-                            Please visit the service portal to view full details and closure notes for your request.
-                        </p>
-
-                        <p style="margin: 20px 0 20px 0; color: #1a1a1a; text-align: center;">
-                            Questions or feedback? Contact:
-                        </p>
-
-                        <div style="background-color: #f9f9f9; border-left: 4px solid #dc143c; padding: 20px; margin: 25px 0; border-radius: 4px;">
-                            <p style="margin: 0; color: #1a1a1a; font-weight: bold; font-size: 18px;">
-                                ${request_item.assignment_group.name}
-                            </p>
-                            <p style="margin: 5px 0 0 0; color: #666666; font-size: 14px;">
-                                ${request_item.assignment_group.email}
-                            </p>
-                        </div>
-
-                        <p style="margin: 20px 0 0 0; color: #333333; text-align: center;">
-                            Thanks!
-                        </p>
+                    <div style="background-color: #f9fafb; border-left: 4px solid #dc143c; padding: 18px 18px 16px 18px; margin: 22px 0; border-radius: 4px;">
+                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Completion Summary</p>
+                        <p style="margin: 0 0 6px 0; color: #111827; font-weight: 700; font-size: 22px; line-height: 1.3;">${request_item.number}</p>
+                        <p style="margin: 0; color: #111827; font-weight: 600; font-size: 15px; line-height: 1.5;">Final status: ${request_item.state}</p>
+                        <p style="margin: 6px 0 0 0; color: #4b5563; font-size: 14px; line-height: 1.5;">Completed on: ${request_item.closed_on}</p>
                     </div>
+
+                    <table role="presentation" style="margin: 28px auto 26px auto; border-collapse: separate;">
+                        <tr>
+                            <td style="background-color: #dc143c; border: 2px solid #dc143c; border-radius: 4px; text-align: center;">
+                                <a href="/sp?id=ticket&amp;table=sc_req_item&amp;sys_id=${sys_id}&amp;view=sp" style="display: inline-block; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; line-height: 1; padding: 14px 34px;">View Request Summary</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p style="margin: 0 0 16px 0; color: #111827; font-size: 14px;"><strong>Need more information?</strong><br>Open your request to review closure notes and any final updates.</p>
+
+                    <p style="margin: 0 0 12px 0; color: #1a1a1a; text-align: center;">Questions or feedback? Contact:</p>
+
+                    <div style="background-color: #f9fafb; border-left: 4px solid #dc143c; padding: 16px 18px; margin: 0 0 22px 0; border-radius: 4px;">
+                        <p style="margin: 0; color: #111827; font-weight: 700; font-size: 17px; line-height: 1.45;">${request_item.assignment_group.name}</p>
+                        <p style="margin: 4px 0 0 0; color: #4b5563; font-size: 14px; line-height: 1.5;">${request_item.assignment_group.email}</p>
+                    </div>
+
+                    <p style="margin: 0; color: #374151; text-align: center;">Thanks,<br>Zekelman IT</p>
                 </td>
             </tr>
 
-            <!-- Footer -->
             <tr>
-                <td style="background-color: #1a1a1a; padding: 20px 30px; text-align: center;">
-                    <p style="margin: 0; color: #ffffff; font-size: 12px; line-height: 1.6;">
-                        <span style="color: #dc143c;">●</span>
-                        This is an automated notification from our system
-                    </p>
+                <td style="background-color: #171717; padding: 18px 24px; text-align: center;">
+                    <p style="margin: 0; color: #ffffff; font-size: 12px; line-height: 1.6;"><span style="color: #dc143c;">●</span> This is an automated notification from Zekelman IT</p>
                 </td>
             </tr>
         </table>

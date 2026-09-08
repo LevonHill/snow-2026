@@ -1,0 +1,57 @@
+<div style="width: 100%; background-color: #f3f4f6; padding: 24px 0;">
+<div style="display: none; font-size: 1px; color: #f3f4f6; line-height: 1px; max-height: 0; max-width: 0; opacity: 0; overflow: hidden;">
+Request ${number} has been submitted successfully. Track updates from your Service Portal.
+</div>
+
+<table style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-collapse: collapse; border: 1px solid #e5e7eb;" role="presentation">
+<tbody>
+<tr>
+<td style="background-color: #171717; background-image: linear-gradient(135deg, #171717 0%, #303030 100%); padding: 32px 24px; text-align: center;">
+<p style="margin: 0 0 8px 0; color: #fca5a5; font-size: 12px; letter-spacing: 1.1px; text-transform: uppercase;">Service Request</p>
+<h1 style="margin: 0; color: #ffffff; font-size: 28px; line-height: 1.25; font-weight: 700;">Request Submitted Successfully</h1>
+</td>
+</tr>
+
+<tr>
+<td style="padding: 32px 24px; background-color: #ffffff; color: #333333; font-size: 16px; line-height: 1.65;">
+<p style="margin: 0 0 18px 0; color: #1a1a1a;">Your requested item was opened and submitted successfully. We have received it and our team will start processing it shortly.</p>
+
+<div style="background-color: #f9fafb; border-left: 4px solid #dc143c; padding: 18px 18px 16px 18px; margin: 22px 0; border-radius: 4px;">
+<p style="margin: 0 0 8px 0; color: #6b7280; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Request Reference</p>
+<p style="margin: 0 0 6px 0; color: #111827; font-weight: 700; font-size: 22px; line-height: 1.3;">${number}</p>
+<p style="margin: 0; color: #111827; font-weight: 600; font-size: 15px; line-height: 1.5;">Created by: ${sys_created_by}</p>
+<p style="margin: 8px 0 0 0; color: #6b7280; font-size: 13px;">Keep this reference number for your records.</p>
+</div>
+
+<table role="presentation" style="margin: 28px auto 26px auto; border-collapse: separate;">
+<tbody>
+<tr>
+<td style="background-color: #dc143c; border: 2px solid #dc143c; border-radius: 4px; text-align: center;">
+<a href="/sp?id=ticket&amp;table=sc_req_item&amp;sys_id=${sys_id}&amp;view=sp" style="display: inline-block; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; line-height: 1; padding: 14px 34px;">View Your Request</a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p style="margin: 0 0 16px 0; color: #111827; font-size: 14px;"><strong>What happens next?</strong><br>Your request has been assigned for review. You will receive email updates as it progresses.</p>
+
+<p style="margin: 0 0 12px 0; color: #1a1a1a; text-align: center;">Questions? Contact:</p>
+
+<div style="background-color: #f9fafb; border-left: 4px solid #dc143c; padding: 16px 18px; margin: 0 0 22px 0; border-radius: 4px;">
+<p style="margin: 0; color: #111827; font-weight: 700; font-size: 17px; line-height: 1.45;">Assigned Tech: ${assigned_to.name}</p>
+<p style="margin: 4px 0 0 0; color: #4b5563; font-size: 14px; line-height: 1.5;">Email: ${assigned_to.email}</p>
+<p style="margin: 8px 0 0 0; color: #6b7280; font-size: 13px; line-height: 1.5;">If an assignee is not shown yet, your request is still in queue assignment and will be routed shortly.</p>
+</div>
+
+<p style="margin: 0; color: #374151; text-align: center;">Thanks,<br>Zekelman IT</p>
+</td>
+</tr>
+
+<tr>
+<td style="background-color: #171717; padding: 18px 24px; text-align: center;">
+<p style="margin: 0; color: #ffffff; font-size: 12px; line-height: 1.6;"><span style="color: #dc143c;">●</span> This is an automated notification from Zekelman IT</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
