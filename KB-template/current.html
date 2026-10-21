@@ -1,0 +1,117 @@
+<p>&nbsp;</p>
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      padding: 40px;
+      color: #2c2c2c;
+    }
+
+    .kb-container {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+
+    .kb-header h1 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .kb-section {
+      margin-bottom: 25px;
+    }
+
+    .kb-section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-left: 4px solid #0078d4;
+      padding-left: 10px;
+    }
+
+    .kb-section p,
+    .kb-section li {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ol, ul {
+      margin-left: 20px;
+    }
+
+    pre, code {
+      background: #f0f2f4;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .warning {
+      background: #fff7e6;
+      border-left: 4px solid #ff9800;
+      padding: 15px;
+    }
+
+    .kb-footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+      text-align: right;
+    }
+  .file-path{
+    color:red;
+  }
+&nbsp;&nbsp;</style>
+<div class="kb-container"><header class="kb-header">
+<h1>Cisco Secure Client VPN</h1>
+<p class="subtitle">Fix: Start Menu Shortcut Broken</p>
+</header>
+<section class="kb-section">
+<h2>Issue</h2>
+<p>Cisco Secure Client VPN will not launch from the Start Menu. Clicking the shortcut does nothing or results in an error.</p>
+</section>
+<section class="kb-section">
+<h2>Cause</h2>
+<p>The Start Menu shortcut is no longer linked to the correct Cisco Secure Client executable. This commonly occurs after updates, partial installs, or profile migrations.</p>
+</section>
+<section class="kb-section">
+<h2>Resolution</h2>
+<ol>
+<li>Open <strong>File Explorer</strong></li>
+<li>Navigate to:
+<p class="file-path">C:\Program Files (x86)\Cisco\Cisco Secure Client\UI\Setup</p>
+</li>
+<li>Locate <strong>csc_ui.exe</strong></li>
+<li>Double-click the file to launch Cisco Secure Client</li>
+<li>Optional: Right-click <strong>csc_ui.exe</strong> and select <strong>Create shortcut</strong> to restore Start Menu access</li>
+</ol>
+</section>
+<section class="kb-section warning">
+<h2>Notes</h2>
+<ul>
+<li>Do not use <code>vpnui.exe</code> if it is missing or outdated</li>
+<li>If <code>csc_ui.exe</code> is missing, reinstall Cisco Secure Client</li>
+<li>Administrative rights are not required to launch the executable</li>
+</ul>
+</section>
+<footer class="kb-footer">
+<p>Last Updated: YYYY-MM-DD</p>
+<p>Resolution Owner: IT Support</p>
+</footer></div>

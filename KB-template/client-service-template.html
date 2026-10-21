@@ -1,0 +1,107 @@
+<h1>Microsoft Edge URL Blocklist Configuration</h1>
+
+<p><strong>Purpose:</strong> This article explains how to configure website blocking and allowlisting in Microsoft Edge using Windows Registry settings. This configuration is intended for non-domain joined devices, such as training computers, where centralized management tools are not available.</p>
+
+<p>(Optional) Administrators can use this method to restrict access to approved websites without installing additional software or content filtering tools.</p>
+
+<br>
+
+<p><strong>Process:</strong></p>
+
+<h2 style="text-align:center;">Configure Edge URL Blocklist and Allowlist</h2>
+
+<ol>
+    <li>Open <strong>Registry Editor</strong> (regedit.exe).</li>
+
+    <li>Navigate to:
+        <ul>
+            <li>HKLM\Software\Policies\Microsoft</li>
+        </ul>
+    </li>
+
+    <li>Create a registry key named <strong>Edge</strong>.</li>
+
+    <li>Under the <strong>Edge</strong> key, create the following subkeys:
+        <ol type="a">
+            <li>URLBlocklist</li>
+            <li>URLAllowlist</li>
+        </ol>
+    </li>
+
+    <li>To create a blocklist:
+        <ol type="a">
+            <li>Open the <strong>URLBlocklist</strong> key.</li>
+            <li>Create String Values named in numerical order (1, 2, 3, etc.).</li>
+            <li>Set each Value Data field to the website you want to block.</li>
+        </ol>
+    </li>
+
+    <li>To create an allowlist:
+        <ol type="a">
+            <li>Open the <strong>URLAllowlist</strong> key.</li>
+            <li>Create String Values named in numerical order (1, 2, 3, etc.).</li>
+            <li>Set each Value Data field to an approved website.</li>
+        </ol>
+    </li>
+
+    <li>Restart the computer after making registry changes.</li>
+</ol>
+
+<p><strong>Note:</strong> The URLBlocklist key prevents access to specified websites, while the URLAllowlist key permits access to approved websites.</p>
+
+<p><strong>Note:</strong> Registry String Values should be numbered sequentially beginning with 1.</p>
+
+<br>
+
+<p style="color:red;">
+<strong>Warning:</strong> To block all websites except those explicitly approved, create a String Value named <strong>1</strong> in the URLBlocklist key and set the Value Data to <strong>*</strong>.
+</p>
+
+<p style="color:red;">
+<strong>Warning:</strong> If all websites are blocked using the wildcard (*), be sure to allow <strong>edge://*</strong> so users can access Edge settings and internal browser pages.
+</p>
+
+<p style="color:red;">
+<strong>Warning:</strong> Adding <strong>*.</strong> before a domain may limit access to only specific URLs and could prevent access to required subdomains.
+</p>
+
+<br>
+
+<h2 style="text-align:center;">Current Training Computer Allowlist (Updated 04/30/2026)</h2>
+
+<ol>
+    <li>microsoft.com</li>
+    <li>microsoftonline.com</li>
+    <li>simpplr.link</li>
+    <li>scorm.cloud</li>
+    <li>docebosaas.com</li>
+    <li>zekelman.com</li>
+    <li>myworkday.com</li>
+    <li>myworkdaycdn.com</li>
+    <li>edge://*</li>
+    <li>zconnect.my.salesforce.com</li>
+    <li>zconnect.file.force.com</li>
+    <li>office.com</li>
+    <li>windowsazure.com</li>
+    <li>powerapps.com</li>
+    <li>powerautomate.com</li>
+    <li>icims.com</li>
+    <li>sharepoint.com</li>
+    <li>knowbe4.com</li>
+    <li>quickhelp.com</li>
+    <li>login.live.com</li>
+    <li>zconnect.lightning.force.com</li>
+    <li>zconnect--simpplr.vf.force.com</li>
+    <li>cloud.com</li>
+    <li>cloud.microsoft</li>
+</ol>
+
+<br>
+
+<p><strong>Summary:</strong></p>
+
+<p>Microsoft Edge supports local website filtering through registry-based URLBlocklist and URLAllowlist policies. This configuration provides a simple method for limiting web access on standalone or training computers without requiring domain management or third-party software.</p>
+
+<br>
+
+<p><strong>Last Updated
