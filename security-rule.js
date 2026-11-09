@@ -34,7 +34,6 @@ function CheckCounter(){
         console.log('You have exceeded the maximum number of accesses');
         clearInterval(timer);
     }
-
 }
 function ChangeNumber(num){
     console.log(counter += num);
